@@ -10,6 +10,6 @@ server.register(cors, {
 
 server.register(driverRoutes);
 
-server.listen({ port: 3333 }, () => {
+server.listen({ port: Number(process.env.PORT ?? 3333) }, () => {
   console.log("Server init");
 });
